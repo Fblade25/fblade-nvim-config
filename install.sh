@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="fblade-nvim-config"  # Ensure this is relative to your home directory
+DOTFILES_DIR="fblade-nvim-config/src"
 echo "Symlinking dotfiles..."
 
 # Check that the files exist before creating symlinks

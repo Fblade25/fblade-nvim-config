@@ -37,4 +37,4 @@ Session.vim
 # These will depend on which plugin manager you're using
 # Example: packer.nvim cache
 # .local/share/nvim/site/pack/packer/
-
+*.egg-info/
