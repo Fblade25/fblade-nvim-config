@@ -52,5 +52,37 @@ else
   echo "zsh-autosuggestions plugin is already enabled in .zshrc."
 fi
 
+# Check if zsh-syntax-highlighting is installed
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
+  echo "Installing zsh-syntax-highlighting plugin..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+else
+  echo "zsh-syntax-highlighting is already installed."
+fi
+
+# Make sure zsh-syntax-highlighting is enabled in .zshrc
+if ! grep -q "zsh-syntax-highlighting" "$HOME/.zshrc"; then
+  echo "Enabling zsh-syntax-highlighting plugin in .zshrc..."
+  sed -i '/^plugins=(/ s/)/ zsh-syntax-highlighting)/' "$HOME/.zshrc"
+else
+  echo "zsh-syntax-highlighting plugin is already enabled in .zshrc."
+fi
+
+# Check if powerlevel10k is installed
+if [ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
+  echo "Installing Powerlevel10k theme..."
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+else
+  echo "Powerlevel10k is already installed."
+fi
+
+# Make sure Powerlevel10k is enabled in .zshrc
+if ! grep -q "POWERLEVEL10K" "$HOME/.zshrc"; then
+  echo "Setting Powerlevel10k as the Zsh theme..."
+  sed -i 's/ZSH_THEME=".*"/ZSH_THEME="powerlevel10k/powerlevel10k"/' "$HOME/.zshrc"
+else
+  echo "Powerlevel10k is already set as the Zsh theme."
+fi
+
 echo "All dotfiles linked successfully."
 
