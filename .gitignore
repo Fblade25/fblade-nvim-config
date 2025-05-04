@@ -1,0 +1,40 @@
+# Neovim swap files
+*.swp
+*.swo
+*.swn
+
+# Neovim backup files
+*.bak
+*.tmp
+*.undo
+
+# Neovim session files
+Session.vim
+
+# Neovim swap file for undo history
+*.un~ 
+
+# Neovim directories (for instance, if using the 'packer' plugin manager or similar)
+# Comment out if you don't use a plugin manager that creates directories in the config
+# (for example, this may apply to packer.nvim or dein.vim etc.)
+/pack
+/plugged
+
+# Compiled files for Lua
+*.out
+*.luac
+
+# Other potential files to ignore
+*.log
+
+# Lazy.nvim plugin manager folder
+.lazy/
+
+# Add additional folders if needed (like plugin caches)
+*/lazy/*
+
+# Plugin manager specific folders (if using a different one like packer)
+# These will depend on which plugin manager you're using
+# Example: packer.nvim cache
+# .local/share/nvim/site/pack/packer/
+
