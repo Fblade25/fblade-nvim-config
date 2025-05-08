@@ -47,7 +47,7 @@ fi
 # Make sure zsh-autosuggestions is enabled in .zshrc
 if ! grep -q "zsh-autosuggestions" "$HOME/.zshrc"; then
   echo "Enabling zsh-autosuggestions plugin in .zshrc..."
-  sed -i '/^plugins=(/ s/)/ zsh-autosuggestions)/' "$HOME/.zshrc"
+  sed -i '' '/^plugins=(/ s/)/ zsh-autosuggestions)/' "$HOME/.zshrc"
 else
   echo "zsh-autosuggestions plugin is already enabled in .zshrc."
 fi
@@ -63,7 +63,7 @@ fi
 # Make sure zsh-syntax-highlighting is enabled in .zshrc
 if ! grep -q "zsh-syntax-highlighting" "$HOME/.zshrc"; then
   echo "Enabling zsh-syntax-highlighting plugin in .zshrc..."
-  sed -i '/^plugins=(/ s/)/ zsh-syntax-highlighting)/' "$HOME/.zshrc"
+  sed -i '' '/^plugins=(/ s/)/ zsh-syntax-highlighting)/' "$HOME/.zshrc"
 else
   echo "zsh-syntax-highlighting plugin is already enabled in .zshrc."
 fi
@@ -79,7 +79,7 @@ fi
 # Make sure Powerlevel10k is enabled in .zshrc
 if ! grep -q "POWERLEVEL10K" "$HOME/.zshrc"; then
   echo "Setting Powerlevel10k as the Zsh theme..."
-  sed -i 's/ZSH_THEME=".*"/ZSH_THEME="powerlevel10k/powerlevel10k"/' "$HOME/.zshrc"
+  sed -i '' 's/ZSH_THEME=".*"/ZSH_THEME="powerlevel10k/powerlevel10k"/' "$HOME/.zshrc"
 else
   echo "Powerlevel10k is already set as the Zsh theme."
 fi
