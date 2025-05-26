@@ -14,8 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Core configuration
 require("core.options")
-require("core.keymaps")
 require("core.plugins")
+require("core.keymaps")
 
 -- Utility
 require("utils.color_utils")
