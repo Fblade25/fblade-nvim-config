@@ -3,6 +3,8 @@ Config files for tmux, nvim and zsh
 
 Will write setup guide later
 
+Note: also requires UV, create a .venv in the root folder of the repo.
+
 ## Setup
 1. Install the repo in `~/`
 2. Navigate into the repo
