@@ -52,3 +52,6 @@ map("n", "<leader>w", ":w<CR>", opts)
 -- Close buffer
 map("n", "<leader>q", ":bd<CR>", opts)
 
+-- Open trouble
+map("n", "<leader>xx", "<cmd>Trouble<CR>", opts)
+

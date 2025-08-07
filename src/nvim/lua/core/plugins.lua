@@ -96,4 +96,9 @@ require("lazy").setup({
 			{ "<leader>cc", "<cmd>CccConvert<CR>", desc = "Convert color" },
 		},
 	},
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {},
+    },
 })

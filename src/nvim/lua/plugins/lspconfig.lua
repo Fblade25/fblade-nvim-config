@@ -5,6 +5,10 @@ local _border = "rounded"
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = _border })
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = _border })
 
+-- Hover diagnostics
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
+
 -- Attach function (set keymaps, etc.)
 local on_attach = function(_, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
