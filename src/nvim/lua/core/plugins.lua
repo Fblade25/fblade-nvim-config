@@ -101,4 +101,26 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {},
     },
+    {
+        "ellisonleao/dotenv.nvim",
+        config = function()
+        require("dotenv").setup({
+            enable_on_load = true,
+            verbose = false,
+            file_name = ".env",
+        })
+        end,
+    },
+    {
+		"pwntester/octo.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("plugins.octo")
+		end,
+	},
+
 })
