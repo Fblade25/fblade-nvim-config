@@ -5,6 +5,8 @@ Will write setup guide later
 
 Note: also requires UV, create a .venv in the root folder of the repo.
 
+Install tmux, nvim, zsh and oh-my-zsh yourself before doing the setup.
+
 ## Setup
 1. Install the repo in `~/`
 2. Navigate into the repo
