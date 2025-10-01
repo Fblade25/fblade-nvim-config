@@ -122,5 +122,31 @@ require("lazy").setup({
 			require("plugins.octo")
 		end,
 	},
+    {
+      "github/copilot.vim",
+      cmd = "Copilot",
+      build = ":Copilot auth", -- run once after install
+      config = function()
+        -- Don’t let Copilot take over <Tab>
+        vim.g.copilot_no_tab_map = true
+        vim.g.copilot_assume_mapped = true
+        vim.g.copilot_tab_fallback = ""
+      end,
+    },
+    {
+          "olimorris/codecompanion.nvim",
+          dependencies = {
+            "nvim-lua/plenary.nvim",
+          },
+          opts = {
+              strategies = {
+                  chat = {
+                    adapter = "copilot",
+                    roles = { user = "Fblade", assistant = "AI" },
+                  },
+                  inline = { adapter = "copilot" },
+                },
+          },
 
+    },
 })
