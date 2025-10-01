@@ -24,6 +24,18 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
+## octo.nvim
+To use [octo.nvim](https://github.com/pwntester/octo.nvim), you need to setup a [GitHub PAT](https://github.com/settings/tokens).
+
+This token needs the following access:
+- repo
+- read:org
+- gist
+- workflow
+- write:discussion
+
+Then copy `.env.example` to `.env`, and then fill in the token in `.env` under `GITHUB_TOKEN`.
+
 ## Rebound Keybinds
 
 ### tmux
