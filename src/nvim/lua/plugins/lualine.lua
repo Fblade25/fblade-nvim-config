@@ -15,8 +15,8 @@ require("lualine").setup({
             {
                 "branch",
                 fmt = function(str)
-                    if #str > 12 then
-                        return str:sub(1, 12) .. "…"
+                    if #str > 20 then
+                        return str:sub(1, 20) .. "…"
                     end
                     return str
                 end,
