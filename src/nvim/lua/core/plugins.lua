@@ -96,57 +96,19 @@ require("lazy").setup({
 			{ "<leader>cc", "<cmd>CccConvert<CR>", desc = "Convert color" },
 		},
 	},
-    {
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {},
-    },
-    {
-        "ellisonleao/dotenv.nvim",
-        config = function()
-        require("dotenv").setup({
-            enable_on_load = true,
-            verbose = false,
-            file_name = ".env",
-        })
-        end,
-    },
-    {
-		"pwntester/octo.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
+	{
+		"ellisonleao/dotenv.nvim",
 		config = function()
-			require("plugins.octo")
+			require("dotenv").setup({
+				enable_on_load = true,
+				verbose = false,
+				file_name = ".env",
+			})
 		end,
 	},
-    {
-      "github/copilot.vim",
-      cmd = "Copilot",
-      build = ":Copilot auth", -- run once after install
-      config = function()
-        -- Don’t let Copilot take over <Tab>
-        vim.g.copilot_no_tab_map = true
-        vim.g.copilot_assume_mapped = true
-        vim.g.copilot_tab_fallback = ""
-      end,
-    },
-    {
-          "olimorris/codecompanion.nvim",
-          dependencies = {
-            "nvim-lua/plenary.nvim",
-          },
-          opts = {
-              strategies = {
-                  chat = {
-                    adapter = "copilot",
-                    roles = { user = "Fblade", assistant = "AI" },
-                  },
-                  inline = { adapter = "copilot" },
-                },
-          },
-
-    },
 })
